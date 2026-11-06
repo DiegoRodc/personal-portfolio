@@ -16,8 +16,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0b1120;
-    color: #e5e7eb;
+    background-color: #F5EFE1;
+    color: #AEC4D4;
     padding-top: 80px;
 }
 
@@ -50,7 +50,7 @@ body {
 /* Name / Logo */
 
 .logo {
-    color: #f8fafc;
+    color: #F5EFE1;
     font-size: 1.50rem;
     font-weight: 700;
     text-decoration: none;
@@ -60,7 +60,7 @@ body {
 }
 
 .logo:hover {
-    color: #38bdf8;
+    color: #E5D3AF;
 }
 
 
@@ -105,7 +105,7 @@ body {
     background: none;
     border: none;
 
-    color: #cbd5e1;
+    color: #AEC4D4;
     font-size: 0.95rem;
     font-weight: 500;
 
@@ -117,7 +117,7 @@ body {
 
 .dropdown-toggle:hover,
 .dropdown.open .dropdown-toggle {
-    color: #38bdf8;
+    color: #AEC4D4;
 }
 
 
@@ -151,8 +151,8 @@ body {
 
     min-width: 230px;
 
-    background-color: #111c30;
-    border: 1px solid #263449;
+    background-color: #790D16;
+    border: 1px solid #790D16;
     border-radius: 10px;
 
     padding: 8px;
@@ -199,8 +199,8 @@ body {
 
 .dropdown-menu a:hover,
 .dropdown-menu a:focus-visible {
-    background-color: #1e293b;
-    color: #38bdf8;
+    background-color: #790D16;
+    color: #E5D3AF;
     padding-left: 16px;
 }
 
