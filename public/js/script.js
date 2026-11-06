@@ -1,33 +1,19 @@
+
+/* =========================
+   DROPDOWN NAVIGATION
+========================= */
+
 const dropdowns = document.querySelectorAll(".dropdown");
 
 const isTouchDevice = window.matchMedia("(hover: none)").matches;
 
 
-/* =========================
-   DROPDOWN BEHAVIOR
-========================= */
+/* Mobile: open and close dropdowns with taps */
 
 dropdowns.forEach((dropdown) => {
 
     const button = dropdown.querySelector(".dropdown-toggle");
 
-    // Desktop: open dropdown when hovering
-    dropdown.addEventListener("mouseenter", () => {
-        if (!isTouchDevice) {
-            dropdown.classList.add("open");
-            button.setAttribute("aria-expanded", "true");
-        }
-    });
-
-    // Desktop: close dropdown when leaving
-    dropdown.addEventListener("mouseleave", () => {
-        if (!isTouchDevice) {
-            dropdown.classList.remove("open");
-            button.setAttribute("aria-expanded", "false");
-        }
-    });
-
-    // Mobile: open and close dropdown when tapping
     button.addEventListener("click", (event) => {
 
         if (!isTouchDevice) {
@@ -50,9 +36,7 @@ dropdowns.forEach((dropdown) => {
 });
 
 
-/* =========================
-   CLOSE ALL DROPDOWNS
-========================= */
+/* Close all dropdowns */
 
 function closeAllDropdowns() {
 
@@ -100,3 +84,37 @@ document.querySelectorAll(".dropdown-menu a").forEach((link) => {
     });
 
 });
+
+
+/* =========================
+   HEADER SCROLL EFFECT
+========================= */
+
+const navbar = document.querySelector(".navbar");
+
+
+function updateNavbar() {
+
+    if (window.scrollY > 30) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+}
+
+
+/* Detect scrolling */
+
+window.addEventListener("scroll", updateNavbar, {
+    passive: true
+});
+
+
+/* Check initial position when page loads */
+
+updateNavbar();

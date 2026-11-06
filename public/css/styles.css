@@ -40,18 +40,52 @@ body {
 
     padding: 0 8%;
 
-    background-color: #790D16;
+    /* Normal header appearance */
+    background-color: rgba(121, 13, 22, 0.98);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid #790D16;
+    border-bottom: 1px solid rgba(121, 13, 22, 0.8);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-/* Name / Logo */
+/* =========================
+   SCROLL EFFECT
+========================= */
+
+/* Header becomes more transparent after scrolling */
+
+.navbar.scrolled {
+    background-color: rgba(121, 13, 22, 0.72);
+    border-bottom-color: rgba(245, 239, 225, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Restore normal appearance when hovering over header */
+
+.navbar.scrolled:hover,
+.navbar.scrolled:focus-within {
+    background-color: rgba(121, 13, 22, 0.98);
+    border-bottom-color: rgba(121, 13, 22, 0.8);
+}
+
+
+/* =========================
+   BRAND / NAME
+========================= */
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
     color: #F5EFE1;
-    font-size: 1.50rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.3px;
@@ -64,12 +98,57 @@ body {
 }
 
 
-/* Navigation Links */
+/* Logo Image */
+
+.brand-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
+}
+
+
+/* Home and other navigation items */
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #F5EFE1;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    padding: 12px 0;
+
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #E5D3AF;
+}
+
+
+/* Navigation Icons */
+
+.nav-icon {
+    width: 19px;
+    height: 19px;
+
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 
@@ -81,9 +160,7 @@ body {
     position: relative;
 }
 
-/* Invisible bridge between button and menu.
-   Prevents the dropdown from closing while
-   moving the cursor toward the menu. */
+/* Invisible bridge between button and menu */
 
 .dropdown::after {
     content: "";
@@ -100,7 +177,7 @@ body {
 .dropdown-toggle {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
 
     background: none;
     border: none;
@@ -117,7 +194,7 @@ body {
 
 .dropdown-toggle:hover,
 .dropdown.open .dropdown-toggle {
-    color: #F5EFE1;
+    color: #E5D3AF;
 }
 
 
@@ -152,12 +229,12 @@ body {
     min-width: 230px;
 
     background-color: #790D16;
-    border: 1px solid #790D16;
+    border: 1px solid #E5D3AF;
     border-radius: 10px;
 
     padding: 8px;
 
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 
     opacity: 0;
     visibility: hidden;
@@ -199,17 +276,17 @@ body {
 
 .dropdown-menu a:hover,
 .dropdown-menu a:focus-visible {
-    background-color: #790D16;
+    background-color: rgba(245, 239, 225, 0.12);
     color: #E5D3AF;
     padding-left: 16px;
 }
 
 
-/* Divider inside dropdown */
+/* Dropdown Divider */
 
 .dropdown-divider {
     height: 1px;
-    background-color: #F5EFE1;
+    background-color: rgba(245, 239, 225, 0.45);
     margin: 6px 0;
 }
 
@@ -281,9 +358,6 @@ section {
 
     border-bottom: 1px solid #790D16;
 
-    /* Prevents section headings from hiding
-       underneath the fixed navigation header. */
-
     scroll-margin-top: 110px;
 }
 
@@ -315,15 +389,27 @@ h2 {
 
     .logo {
         font-size: 1.05rem;
+        gap: 7px;
+    }
+
+    .brand-icon {
+        width: 27px;
+        height: 27px;
     }
 
     .nav-links {
         gap: 15px;
     }
 
+    .nav-item,
     .dropdown-toggle {
         font-size: 0.8rem;
         gap: 6px;
+    }
+
+    .nav-icon {
+        width: 16px;
+        height: 16px;
     }
 
     .dropdown-menu {
@@ -345,7 +431,7 @@ h2 {
 }
 
 
-/* Extra small screens */
+/* Extra Small Screens */
 
 @media (max-width: 400px) {
 
@@ -353,21 +439,34 @@ h2 {
         padding: 0 3%;
     }
 
-    .nav-links {
-        gap: 10px;
-    }
-
     .logo {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        gap: 5px;
     }
 
+    .brand-icon {
+        width: 23px;
+        height: 23px;
+    }
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-item,
     .dropdown-toggle {
-        font-size: 0.72rem;
+        font-size: 0.68rem;
+        gap: 4px;
+    }
+
+    .nav-icon {
+        width: 14px;
+        height: 14px;
     }
 
     .linkedin-link svg {
-        width: 20px;
-        height: 20px;
+        width: 19px;
+        height: 19px;
     }
 }
 

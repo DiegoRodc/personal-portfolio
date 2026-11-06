@@ -1,102 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Diego Orozco's professional portfolio.">
+<header class="navbar">
 
-    <title>Diego Orozco | Portfolio</title>
+    <!-- Logo and Name -->
+    <a href="/" class="logo">
+        <img src="/icons/Logo.png" alt="" class="brand-icon">
+        <span>Diego Orozco</span>
+    </a>
 
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js" defer></script>
-</head>
+     <!-- Website Favicons -->
+        <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
 
-<body>
+        <!-- Apple Devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 
-    <header class="navbar">
+        <!-- Android Devices -->
+        <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png">
 
-        <a href="/" class="logo">Diego Orozco</a>
+    <nav class="nav-links" aria-label="Main navigation">
 
-        <nav class="nav-links" aria-label="Main navigation">
+        <!-- Home -->
+        <a href="/" class="nav-item">
+            <img src="/icons/home.png" alt="" class="nav-icon">
+            <span>Home</span>
+        </a>
 
-            <!-- Projects Dropdown -->
-            <div class="dropdown">
+        <!-- Projects Dropdown -->
+        <div class="dropdown">
 
-                <button class="dropdown-toggle"
-                        type="button"
-                        aria-expanded="false">
-                    My Projects
-                    <span class="arrow" aria-hidden="true"></span>
-                </button>
+            <button class="dropdown-toggle"
+                    type="button"
+                    aria-expanded="false">
 
-                <div class="dropdown-menu">
-                    <a href="/myprojects/">All Projects</a>
+                <img src="/icons/portfolio.png"
+                     alt=""
+                     class="nav-icon">
 
-                    <div class="dropdown-divider"></div>
+                <span>My Projects</span>
 
-                    <a href="/myprojects/#soc-dashboard">SOC Dashboard</a>
-                    <a href="/myprojects/#crypto-detection">Crypto Scam Detection</a>
-                    <a href="/myprojects/#networking">Networking Projects</a>
-                </div>
+                <span class="arrow" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown-menu">
+
+                <a href="/myprojects/">All Projects</a>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="/myprojects/#soc-dashboard">
+                    SOC Dashboard
+                </a>
+
+                <a href="/myprojects/#crypto-detection">
+                    Crypto Scam Detection
+                </a>
+
+                <a href="/myprojects/#networking">
+                    Networking Projects
+                </a>
 
             </div>
+        </div>
 
-            <!-- Research Dropdown -->
-            <div class="dropdown">
+        <!-- Research Dropdown -->
+        <div class="dropdown">
 
-                <button class="dropdown-toggle"
-                        type="button"
-                        aria-expanded="false">
-                    Research
-                    <span class="arrow" aria-hidden="true"></span>
-                </button>
+            <button class="dropdown-toggle"
+                    type="button"
+                    aria-expanded="false">
 
-                <div class="dropdown-menu">
-                    <a href="/research/">All Research</a>
+                <img src="/icons/search.png"
+                     alt=""
+                     class="nav-icon">
 
-                    <div class="dropdown-divider"></div>
+                <span>Research</span>
 
-                    <a href="/research/#whatsapp-research">
-                        WhatsApp Scam Research
-                    </a>
-                </div>
+                <span class="arrow" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown-menu">
+
+                <a href="/research/">All Research</a>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="/research/#whatsapp-research">
+                    WhatsApp Scam Research
+                </a>
 
             </div>
+        </div>
 
-            <!-- LinkedIn -->
-            <a
-                href="https://www.linkedin.com/in/diego-r-orozco/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="linkedin-link"
-                aria-label="Visit my LinkedIn profile"
-            >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76
-                    2.24 5 5 5h14c2.76 0 5-2.24
-                    5-5v-14c0-2.76-2.24-5-5-5zM8
-                    19H5V9h3v10zM6.5 7.73c-.97
-                    0-1.75-.79-1.75-1.75s.78-1.75
-                    1.75-1.75 1.75.79 1.75
-                    1.75-.78 1.75-1.75 1.75zM20
-                    19h-3v-4.87c0-1.16-.02-2.65-1.62-2.65
-                    -1.62 0-1.87 1.27-1.87
-                    2.57V19h-3V9h2.88v1.37h.04c.4-.76
-                    1.38-1.56 2.84-1.56 3.04 0
-                    3.61 2 3.61 4.6V19z"/>
-                </svg>
-            </a>
+        <!-- LinkedIn -->
+        <a
+            href="https://www.linkedin.com/in/diego-r-orozco/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="linkedin-link"
+            aria-label="Visit my LinkedIn profile"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76
+                2.24 5 5 5h14c2.76 0 5-2.24
+                5-5v-14c0-2.76-2.24-5-5-5zM8
+                19H5V9h3v10zM6.5 7.73c-.97
+                0-1.75-.79-1.75-1.75s.78-1.75
+                1.75-1.75 1.75.79 1.75
+                1.75-.78 1.75-1.75 1.75zM20
+                19h-3v-4.87c0-1.16-.02-2.65-1.62-2.65
+                -1.62 0-1.87 1.27-1.87
+                2.57V19h-3V9h2.88v1.37h.04c.4-.76
+                1.38-1.56 2.84-1.56 3.04 0
+                3.61 2 3.61 4.6V19z"/>
+            </svg>
+        </a>
 
-        </nav>
+    </nav>
 
-    </header>
-
-    <main>
-        <section id="home">
-            <h1>Welcome to my portfolio</h1>
-            <p>More about me coming soon.</p>
-        </section>
-    </main>
-
-</body>
-</html>
+</header>
