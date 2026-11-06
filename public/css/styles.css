@@ -105,7 +105,7 @@ body {
     background: none;
     border: none;
 
-    color: #AEC4D4;
+    color: #F5EFE1;
     font-size: 0.95rem;
     font-weight: 500;
 
@@ -117,7 +117,7 @@ body {
 
 .dropdown-toggle:hover,
 .dropdown.open .dropdown-toggle {
-    color: #AEC4D4;
+    color: #F5EFE1;
 }
 
 
@@ -185,7 +185,7 @@ body {
     display: block;
     padding: 11px 12px;
 
-    color: #cbd5e1;
+    color: #F5EFE1;
     text-decoration: none;
     font-size: 0.9rem;
 
