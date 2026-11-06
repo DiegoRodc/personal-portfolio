@@ -40,10 +40,10 @@ body {
 
     padding: 0 8%;
 
-    background-color: rgba(11, 17, 32, 0.95);
+    background-color: #790D16;
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #790D16;
 }
 
 
@@ -51,7 +51,7 @@ body {
 
 .logo {
     color: #f8fafc;
-    font-size: 1.35rem;
+    font-size: 1.50rem;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.3px;
