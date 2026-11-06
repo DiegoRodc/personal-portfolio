@@ -17,7 +17,7 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F5EFE1;
-    color: #AEC4D4;
+    color: #790D16;
     padding-top: 80px;
 }
 
@@ -209,7 +209,7 @@ body {
 
 .dropdown-divider {
     height: 1px;
-    background-color: #263449;
+    background-color: #F5EFE1;
     margin: 6px 0;
 }
 
@@ -229,7 +229,7 @@ body {
 
     .dropdown:hover .dropdown-toggle,
     .dropdown:focus-within .dropdown-toggle {
-        color: #38bdf8;
+        color: #E5D3AF;
     }
 
     .dropdown:hover .arrow,
@@ -254,7 +254,7 @@ body {
     width: 25px;
     height: 25px;
 
-    fill: #94a3b8;
+    fill: #1d85ee;
 
     transition:
         fill 0.2s ease,
@@ -279,7 +279,7 @@ section {
     min-height: 400px;
     padding: 60px 0;
 
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #790D16;
 
     /* Prevents section headings from hiding
        underneath the fixed navigation header. */
@@ -290,7 +290,7 @@ section {
 h1,
 h2 {
     margin-bottom: 20px;
-    color: #f8fafc;
+    color: #790D16;
 }
 
 .project-section {
