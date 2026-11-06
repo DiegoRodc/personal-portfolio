@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Diego Orozco's professional portfolio.">
 
     <title>Diego Orozco | Portfolio</title>
 
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Fixed Navigation Header -->
     <header class="navbar">
 
-        <a href="index.html" class="logo">
-            Diego Orozco
-        </a>
+        <a href="/" class="logo">Diego Orozco</a>
 
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Main navigation">
 
             <!-- Projects Dropdown -->
             <div class="dropdown">
 
-                <button class="dropdown-toggle" aria-expanded="false">
+                <button class="dropdown-toggle"
+                        type="button"
+                        aria-expanded="false">
                     My Projects
-                    <span class="arrow">⌄</span>
+                    <span class="arrow" aria-hidden="true"></span>
                 </button>
 
                 <div class="dropdown-menu">
-
-                    <a href="#projects">All Projects</a>
+                    <a href="/myprojects/">All Projects</a>
 
                     <div class="dropdown-divider"></div>
 
-                    <a href="#soc-dashboard">SOC Dashboard</a>
-                    <a href="#crypto-detection">Crypto Scam Detection</a>
-                    <a href="#networking">Networking Projects</a>
-
+                    <a href="/myprojects/#soc-dashboard">SOC Dashboard</a>
+                    <a href="/myprojects/#crypto-detection">Crypto Scam Detection</a>
+                    <a href="/myprojects/#networking">Networking Projects</a>
                 </div>
+
             </div>
 
             <!-- Research Dropdown -->
             <div class="dropdown">
 
-                <button class="dropdown-toggle" aria-expanded="false">
+                <button class="dropdown-toggle"
+                        type="button"
+                        aria-expanded="false">
                     Research
-                    <span class="arrow">⌄</span>
+                    <span class="arrow" aria-hidden="true"></span>
                 </button>
 
                 <div class="dropdown-menu">
-
-                    <a href="#research">All Research</a>
+                    <a href="/research/">All Research</a>
 
                     <div class="dropdown-divider"></div>
 
-                    <a href="#whatsapp-research">WhatsApp Scam Research</a>
-
+                    <a href="/research/#whatsapp-research">
+                        WhatsApp Scam Research
+                    </a>
                 </div>
+
             </div>
 
             <!-- LinkedIn -->
@@ -91,28 +91,11 @@
 
     </header>
 
-    <!-- Main Content -->
     <main>
-
         <section id="home">
             <h1>Welcome to my portfolio</h1>
             <p>More about me coming soon.</p>
         </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-
-            <div id="soc-dashboard"></div>
-            <div id="crypto-detection"></div>
-            <div id="networking"></div>
-        </section>
-
-        <section id="research">
-            <h2>Research</h2>
-
-            <div id="whatsapp-research"></div>
-        </section>
-
     </main>
 
 </body>

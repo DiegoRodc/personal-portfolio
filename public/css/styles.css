@@ -1,0 +1,390 @@
+
+/* =========================
+   GENERAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b1120;
+    color: #e5e7eb;
+    padding-top: 80px;
+}
+
+
+/* =========================
+   NAVIGATION HEADER
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background-color: rgba(11, 17, 32, 0.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #1e293b;
+}
+
+
+/* Name / Logo */
+
+.logo {
+    color: #f8fafc;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: #38bdf8;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* =========================
+   DROPDOWN NAVIGATION
+========================= */
+
+.dropdown {
+    position: relative;
+}
+
+/* Invisible bridge between button and menu.
+   Prevents the dropdown from closing while
+   moving the cursor toward the menu. */
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+
+/* Dropdown Button */
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    background: none;
+    border: none;
+
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    padding: 12px 0;
+
+    transition: color 0.2s ease;
+}
+
+.dropdown-toggle:hover,
+.dropdown.open .dropdown-toggle {
+    color: #38bdf8;
+}
+
+
+/* Custom Arrow */
+
+.arrow {
+    width: 8px;
+    height: 8px;
+
+    border-right: 1.7px solid currentColor;
+    border-bottom: 1.7px solid currentColor;
+
+    transform: rotate(45deg);
+    margin-top: -4px;
+
+    transition: transform 0.25s ease;
+}
+
+.dropdown.open .arrow {
+    transform: rotate(225deg);
+    margin-top: 4px;
+}
+
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+
+    min-width: 230px;
+
+    background-color: #111c30;
+    border: 1px solid #263449;
+    border-radius: 10px;
+
+    padding: 8px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+
+/* Show dropdown when JavaScript opens it */
+
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* Dropdown Links */
+
+.dropdown-menu a {
+    display: block;
+    padding: 11px 12px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    border-radius: 6px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding-left: 16px;
+}
+
+
+/* Divider inside dropdown */
+
+.dropdown-divider {
+    height: 1px;
+    background-color: #263449;
+    margin: 6px 0;
+}
+
+
+/* =========================
+   DESKTOP HOVER BEHAVIOR
+========================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown:hover .dropdown-toggle,
+    .dropdown:focus-within .dropdown-toggle {
+        color: #38bdf8;
+    }
+
+    .dropdown:hover .arrow,
+    .dropdown:focus-within .arrow {
+        transform: rotate(225deg);
+        margin-top: 4px;
+    }
+}
+
+
+/* =========================
+   LINKEDIN ICON
+========================= */
+
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin-link svg {
+    width: 25px;
+    height: 25px;
+
+    fill: #94a3b8;
+
+    transition:
+        fill 0.2s ease,
+        transform 0.2s ease;
+}
+
+.linkedin-link:hover svg {
+    fill: #0a66c2;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    padding: 40px 8%;
+}
+
+section {
+    min-height: 400px;
+    padding: 60px 0;
+
+    border-bottom: 1px solid #1e293b;
+
+    /* Prevents section headings from hiding
+       underneath the fixed navigation header. */
+
+    scroll-margin-top: 110px;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.project-section {
+    min-height: 350px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 5%;
+        height: 75px;
+    }
+
+    body {
+        padding-top: 75px;
+    }
+
+    .logo {
+        font-size: 1.05rem;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .dropdown-toggle {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .dropdown-menu {
+        min-width: 190px;
+    }
+
+    .dropdown-menu a {
+        font-size: 0.85rem;
+    }
+
+    .linkedin-link svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    main {
+        padding: 30px 5%;
+    }
+}
+
+
+/* Extra small screens */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 0.95rem;
+    }
+
+    .dropdown-toggle {
+        font-size: 0.72rem;
+    }
+
+    .linkedin-link svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
