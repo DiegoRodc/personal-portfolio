@@ -393,9 +393,12 @@ h2 {
     }
 
     .brand-icon {
-        width: 27px;
-        height: 27px;
-    }
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
+            saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
+}
 
     .nav-links {
         gap: 15px;
