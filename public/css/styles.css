@@ -105,6 +105,8 @@ body {
     height: 34px;
     object-fit: contain;
     flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
+            saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
 }
 
 
@@ -450,6 +452,8 @@ h2 {
     .brand-icon {
         width: 23px;
         height: 23px;
+        filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
+            saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
     }
 
     .nav-links {
