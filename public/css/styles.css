@@ -373,9 +373,21 @@ h2 {
     min-height: 350px;
 }
 
+.home {
+  display: flex;          /* Aligns paragraph and image side-by-side */
+  align-items: center;    /* Vertically centers the image next to the text */
+  gap: 24px;              /* Creates a clean breathing space between text and image */
+  max-width: 900px;       /* Keeps the entire section from stretching across the whole page */
+}
+
 .intro {
     text-align: justify;
     max-width: 50%;
+}
+
+img {
+  width: 250px;           /* Sets a specific width for your image */
+  height: auto;           /* Maintains the original image aspect ratio */
 }
 
 /* =========================
