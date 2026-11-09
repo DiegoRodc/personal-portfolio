@@ -373,6 +373,11 @@ h2 {
     min-height: 350px;
 }
 
+.intro {
+    text-align: justify;
+    max-width: 65ch;
+    margin-inline: auto;
+}
 
 /* =========================
    MOBILE RESPONSIVENESS
