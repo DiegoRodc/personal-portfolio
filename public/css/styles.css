@@ -801,7 +801,7 @@ h2 {
 .project-image img {
     display: block;
     width: 100%;
-    height: 125%;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.35s ease;
 }
