@@ -1,7 +1,6 @@
 
 /* ==================================================
    1. WEBSITE CUSTOMIZATION
-   Change these values to customize your website.
 ================================================== */
 
 :root {
@@ -13,18 +12,18 @@
     --linkedin-blue: #1d85ee;
 
     /* FONTS */
-    --main-font: Lora, Arial, Helvetica;
+    --main-font: Arial, Helvetica, sans-serif;
 
     /* FONT SIZES */
     --name-size: 1.5rem;
     --navigation-size: 0.95rem;
-    --heading-size: 2.8rem;
-    --subheading-size: 1.8rem;
-    --introduction-size: 1.12rem;
+    --heading-size: 3rem;
+    --subheading-size: 1.3rem;
+    --introduction-size: 1.08rem;
 
     /* LAYOUT */
     --page-padding: 8%;
-    --content-width: 1100px;
+    --content-width: 1150px;
     --photo-width: 280px;
 
     /* HEADER */
@@ -128,9 +127,6 @@ body {
     color: var(--gold);
 }
 
-
-/* Logo Image */
-
 .brand-icon {
     width: 34px;
     height: 34px;
@@ -172,9 +168,6 @@ body {
     color: var(--gold);
 }
 
-
-/* Navigation Icons */
-
 .nav-icon {
     width: 22px;
     height: 22px;
@@ -193,8 +186,6 @@ body {
 .dropdown {
     position: relative;
 }
-
-/* Invisible bridge between button and menu */
 
 .dropdown::after {
     content: "";
@@ -283,9 +274,6 @@ body {
         visibility 0.2s ease;
 }
 
-
-/* Show Dropdown */
-
 .dropdown.open .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -317,9 +305,6 @@ body {
     color: var(--gold);
     padding-left: 16px;
 }
-
-
-/* Dropdown Divider */
 
 .dropdown-divider {
     height: 1px;
@@ -386,36 +371,19 @@ body {
 ================================================== */
 
 main {
-    padding: 50px var(--page-padding);
+    padding: 60px var(--page-padding);
     max-width: 1500px;
     margin: 0 auto;
 }
 
-section {
-    min-height: 400px;
-    padding: 30px 0;
-
-    scroll-margin-top: 110px;
-}
-
-h1,
-h2 {
-    color: var(--burgundy);
-}
-
-h1 {
-    font-size: var(--heading-size);
-    margin-bottom: 12px;
-}
-
-h2 {
-    font-size: var(--subheading-size);
-    margin-bottom: 30px;
+.hero {
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
 
 
 /* ==================================================
-   11. HOMEPAGE INTRODUCTION
+   11. HOMEPAGE INTRODUCTION LAYOUT
 ================================================== */
 
 .home {
@@ -423,18 +391,36 @@ h2 {
     align-items: center;
     justify-content: space-between;
 
-    gap: 50px;
-
-    max-width: var(--content-width);
-    margin-top: 30px;
+    gap: 60px;
+    width: 100%;
 }
 
 
-/* Introduction Text */
+/* Left Side: Text */
+
+.intro-content {
+    flex: 1;
+    min-width: 0;
+}
+
+h1 {
+    color: var(--burgundy);
+    font-size: var(--heading-size);
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: var(--burgundy);
+    font-size: var(--subheading-size);
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+
+/* Introduction Paragraphs */
 
 .intro {
-    flex: 1;
-    max-width: 700px;
+    max-width: 720px;
 
     font-size: var(--introduction-size);
     line-height: 1.8;
@@ -447,13 +433,27 @@ h2 {
 }
 
 
+/* ==================================================
+   12. PROFILE PHOTO AND RESUME
+================================================== */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+
 /* Personal Photo */
 
 .photo {
+    display: block;
+
     width: var(--photo-width);
     height: auto;
-
-    flex-shrink: 0;
 
     padding: 8px;
 
@@ -465,8 +465,92 @@ h2 {
 }
 
 
+/* Resume Button */
+
+.resume-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: var(--photo-width);
+
+    padding: 13px 20px;
+
+    background-color: var(--burgundy);
+    color: var(--cream);
+
+    border: 2px solid var(--burgundy);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Resume Button Hover */
+
+.resume-button:hover {
+    background-color: transparent;
+    color: var(--burgundy);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(121, 13, 22, 0.15);
+}
+
+
+/* Download Icon */
+
+.resume-icon {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
 /* ==================================================
-   12. MOBILE RESPONSIVENESS
+   13. TABLET RESPONSIVENESS
+================================================== */
+
+@media (max-width: 900px) {
+
+    :root {
+        --page-padding: 5%;
+        --photo-width: 240px;
+    }
+
+    .home {
+        gap: 35px;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* ==================================================
+   14. MOBILE RESPONSIVENESS
 ================================================== */
 
 @media (max-width: 650px) {
@@ -518,21 +602,31 @@ h2 {
     }
 
     main {
-        padding: 35px 5%;
+        padding: 40px 5%;
     }
+
+    /* Stack text and profile vertically */
 
     .home {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 30px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
     }
 
-    .intro {
-        max-width: 100%;
-        font-size: 1rem;
+    .intro-content {
+        width: 100%;
+    }
+
+    .profile {
+        align-self: center;
+        width: 100%;
     }
 
     .photo {
+        width: 220px;
+    }
+
+    .resume-button {
         width: 220px;
     }
 
@@ -541,13 +635,17 @@ h2 {
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .intro {
+        font-size: 1rem;
     }
 }
 
 
 /* ==================================================
-   13. EXTRA SMALL SCREENS
+   15. EXTRA SMALL SCREENS
 ================================================== */
 
 @media (max-width: 400px) {
@@ -589,11 +687,15 @@ h2 {
     .photo {
         width: 200px;
     }
+
+    .resume-button {
+        width: 200px;
+    }
 }
 
 
 /* ==================================================
-   14. ACCESSIBILITY
+   16. ACCESSIBILITY
 ================================================== */
 
 @media (prefers-reduced-motion: reduce) {
