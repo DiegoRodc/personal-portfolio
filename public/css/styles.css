@@ -710,3 +710,270 @@ h2 {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+
+.projects-page {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 65px 8% 90px;
+}
+
+/* Page introduction */
+
+.projects-intro {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 65px;
+}
+
+.projects-intro h1 {
+    font-size: 2.8rem;
+    color: var(--burgundy);
+    margin-bottom: 18px;
+}
+
+.projects-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+/* Individual project sections */
+
+.project-section {
+    scroll-margin-top: 110px;
+    padding: 35px;
+    margin-bottom: 55px;
+    background-color: #fffdf8;
+    border: 1px solid rgba(121, 13, 22, 0.15);
+    border-left: 5px solid var(--burgundy);
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Project layout */
+
+.project-content {
+    display: grid;
+    grid-template-columns: 0.95fr 1.2fr;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Alternate image position */
+
+.project-reverse {
+    grid-template-columns: 1.2fr 0.95fr;
+}
+
+.project-reverse .project-image {
+    order: 2;
+}
+
+.project-reverse .project-details {
+    order: 1;
+}
+
+
+/* Project images */
+
+.project-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--gold);
+    background-color: var(--cream);
+    aspect-ratio: 4 / 3;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.project-section:hover .project-image img {
+    transform: scale(1.035);
+}
+
+
+/* Project text */
+
+.project-category {
+    display: inline-block;
+    color: var(--burgundy);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.project-details h2 {
+    color: var(--burgundy);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.project-details p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 15px;
+}
+
+
+/* Skills and technologies */
+
+.project-skills {
+    margin-top: 24px;
+}
+
+.project-skills h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.skill-tags span {
+    display: inline-block;
+    padding: 7px 11px;
+    background-color: var(--cream);
+    color: var(--burgundy);
+    border: 1px solid rgba(121, 13, 22, 0.2);
+    border-radius: 5px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+
+/* GitHub button */
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 12px 19px;
+
+    background-color: var(--burgundy);
+    color: var(--cream);
+
+    border: 2px solid var(--burgundy);
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.github-button svg {
+    width: 19px;
+    height: 19px;
+    fill: currentColor;
+}
+
+.github-button:hover {
+    background-color: transparent;
+    color: var(--burgundy);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(121, 13, 22, 0.15);
+}
+
+
+/* =========================================
+   RESPONSIVE PROJECTS PAGE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .projects-page {
+        padding: 50px 5% 70px;
+    }
+
+    .project-section {
+        padding: 25px;
+    }
+
+    .project-content,
+    .project-reverse {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-reverse .project-image,
+    .project-reverse .project-details {
+        order: initial;
+    }
+
+    .project-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .projects-intro {
+        margin-bottom: 45px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .projects-page {
+        padding: 40px 5% 55px;
+    }
+
+    .projects-intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .projects-intro p {
+        font-size: 1rem;
+    }
+
+    .project-section {
+        padding: 18px;
+        margin-bottom: 35px;
+    }
+
+    .project-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-details p {
+        font-size: 0.95rem;
+    }
+
+    .skill-tags span {
+        font-size: 0.78rem;
+    }
+
+    .github-button {
+        width: 100%;
+        padding: 12px;
+    }
+}

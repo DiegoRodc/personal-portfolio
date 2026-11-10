@@ -1,115 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects by Diego Orozco.">
+    <meta name="description" content="Explore software development, networking, and programming projects by Diego Orozco.">
 
     <title>My Projects | Diego Orozco</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/script.js" defer></script>
 
-        <!-- Website Favicons -->
+    <!-- Website Favicons -->
     <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-
-    <!-- Apple Devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-
-    <!-- Android Devices -->
     <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png">
-
 </head>
 
 <body>
 
 <header class="navbar">
 
-    <!-- Logo and Name -->
     <a href="/" class="logo">
         <img src="/icons/Logo.png" alt="" class="brand-icon">
         <span>Diego Orozco</span>
     </a>
 
-
     <nav class="nav-links" aria-label="Main navigation">
 
-        <!-- Home -->
         <a href="/" class="nav-item">
             <img src="/icons/home.png" alt="" class="nav-icon">
             <span>Home</span>
         </a>
 
-        <!-- Projects Dropdown -->
         <div class="dropdown">
-
-            <button class="dropdown-toggle"
-                    type="button"
-                    aria-expanded="false">
-
-                <img src="/icons/portfolio.png"
-                     alt=""
-                     class="nav-icon">
-
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+                <img src="/icons/portfolio.png" alt="" class="nav-icon">
                 <span>Projects</span>
-
                 <span class="arrow" aria-hidden="true"></span>
             </button>
 
             <div class="dropdown-menu">
-
                 <a href="/myprojects/">All Projects</a>
-
                 <div class="dropdown-divider"></div>
-
-                <a href="/myprojects/#soc-dashboard">
-                    SOC Dashboard
-                </a>
-
-                <a href="/myprojects/#crypto-detection">
-                    Crypto Scam Detection
-                </a>
-
-                <a href="/myprojects/#networking">
-                    Networking Projects
-                </a>
-
+                <a href="/myprojects/#task-manager">Task Manager</a>
+                <a href="/myprojects/#network-design">Network Design</a>
+                <a href="/myprojects/#cosmo">Flappy Cosmo</a>
             </div>
         </div>
 
-        <!-- Research Dropdown -->
         <div class="dropdown">
-
-            <button class="dropdown-toggle"
-                    type="button"
-                    aria-expanded="false">
-
-                <img src="/icons/search.png"
-                     alt=""
-                     class="nav-icon">
-
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+                <img src="/icons/search.png" alt="" class="nav-icon">
                 <span>Research</span>
-
                 <span class="arrow" aria-hidden="true"></span>
             </button>
 
             <div class="dropdown-menu">
-
                 <a href="/research/">All Research</a>
-
                 <div class="dropdown-divider"></div>
-
-                <a href="/research/#whatsapp-research">
-                    WhatsApp Scam Research
-                </a>
-
+                <a href="/research/#whatsapp-research">WhatsApp Scam Research</a>
             </div>
         </div>
 
-        <!-- LinkedIn -->
         <a
             href="https://www.linkedin.com/in/diego-r-orozco/"
             target="_blank"
@@ -134,32 +90,288 @@
         </a>
 
     </nav>
-
 </header>
 
-    <main>
 
-        <section id="projects">
-            <h1>My Projects</h1>
-            <p>Explore some of the projects I have worked on.</p>
-        </section>
+<main class="projects-page">
 
-        <section id="soc-dashboard" class="project-section">
-            <h2>SOC Dashboard</h2>
-            <p>Project description coming soon.</p>
-        </section>
+    <!-- PAGE INTRODUCTION -->
+    <section class="projects-intro">
+        <h1>My Projects</h1>
 
-        <section id="crypto-detection" class="project-section">
-            <h2>Crypto Scam Detection</h2>
-            <p>Project description coming soon.</p>
-        </section>
+        <p>
+            A collection of projects where I've applied software development,
+            cybersecurity, networking, and programming concepts to build
+            practical solutions.
+        </p>
+    </section>
 
-        <section id="networking" class="project-section">
-            <h2>Networking Projects</h2>
-            <p>Project description coming soon.</p>
-        </section>
 
-    </main>
+    <!-- PROJECT 1: TASK MANAGER -->
+    <section id="task-manager" class="project-section">
+
+        <div class="project-content">
+
+            <div class="project-image">
+                <img
+                    src="/images/projects/task-manager.png"
+                    alt="Task Manager application dashboard"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-details">
+
+                <span class="project-category">Software Development</span>
+
+                <h2>Full-Stack Task Manager</h2>
+
+                <p>
+                    Developed a full-stack task management application that
+                    allows users to organize, track, and manage their daily
+                    tasks through a responsive web interface. The application
+                    includes Google OAuth authentication, user-specific task
+                    storage, and persistent database operations.
+                </p>
+
+                <p>
+                    Built using a client-server architecture, the application
+                    connects a Vue.js frontend to a Node.js and Express backend
+                    through RESTful API endpoints. MongoDB Atlas handles
+                    persistent storage, while Progressive Web App functionality
+                    supports access across web and mobile devices.
+                </p>
+
+                <div class="project-skills">
+                    <h3>Technologies & Skills</h3>
+
+                    <div class="skill-tags">
+                        <span>Vue.js</span>
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>MongoDB</span>
+                        <span>REST APIs</span>
+                        <span>Google OAuth</span>
+                        <span>Full-Stack Development</span>
+                    </div>
+                </div>
+
+                <a
+                    href="https://github.com/DiegoRodc/TaskManager-FullStack-Portfolio"
+                    class="github-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08
+                        3.29 9.39 7.86 10.91.58.11.79-.25.79-.56
+                        0-.27-.01-.99-.02-1.94-3.2.7-3.88-1.54
+                        -3.88-1.54-.53-1.36-1.28-1.72-1.28-1.72
+                        -1.05-.72.08-.71.08-.71 1.16.08 1.77
+                        1.19 1.77 1.19 1.03 1.77 2.7 1.26
+                        3.36.96.1-.75.4-1.26.73-1.55
+                        -2.55-.29-5.24-1.28-5.24-5.7
+                        0-1.26.45-2.29 1.19-3.1
+                        -.12-.29-.52-1.47.11-3.06
+                        0 0 .97-.31 3.17 1.18
+                        .92-.26 1.91-.39 2.89-.39
+                        .98 0 1.97.13 2.89.39
+                        2.2-1.49 3.17-1.18 3.17-1.18
+                        .63 1.59.23 2.77.11 3.06
+                        .74.81 1.19 1.84 1.19 3.1
+                        0 4.43-2.7 5.4-5.27 5.69
+                        .41.36.77 1.06.77 2.14
+                        0 1.55-.01 2.8-.01 3.18
+                        0 .31.21.68.8.56C20.21 21.39
+                        23.5 17.08 23.5 12
+                        23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                    View Full Code on GitHub
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECT 2: NETWORK DESIGN -->
+    <section id="network-design" class="project-section">
+
+        <div class="project-content project-reverse">
+
+            <div class="project-image">
+                <img
+                    src="/images/projects/network-design.png"
+                    alt="Enterprise network topology diagram"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-details">
+
+                <span class="project-category">Networking & Cybersecurity</span>
+
+                <h2>Enterprise Network Design & Security</h2>
+
+                <p>
+                    Designed a secure network infrastructure for a fictional
+                    pharmaceutical company operating across multiple buildings.
+                    The project involved planning network connectivity for
+                    office spaces, laboratories, employees, and external guests
+                    while accounting for different operational and security
+                    requirements.
+                </p>
+
+                <p>
+                    Developed an IP addressing plan, network topology, bill of
+                    materials, and security documentation. The design uses
+                    network segmentation to separate internal resources,
+                    guest access, and isolated laboratory equipment, helping
+                    limit unnecessary communication between network environments.
+                </p>
+
+                <div class="project-skills">
+                    <h3>Technologies & Skills</h3>
+
+                    <div class="skill-tags">
+                        <span>Network Design</span>
+                        <span>IP Addressing</span>
+                        <span>Subnetting</span>
+                        <span>VLANs</span>
+                        <span>Network Segmentation</span>
+                        <span>Network Security</span>
+                        <span>Topology Design</span>
+                        <span>Infrastructure Planning</span>
+                    </div>
+                </div>
+
+                <a
+                    href="https://github.com/DiegoRodc/Enterprise-Network-Design-Security-Project"
+                    class="github-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08
+                        3.29 9.39 7.86 10.91.58.11.79-.25.79-.56
+                        0-.27-.01-.99-.02-1.94-3.2.7-3.88-1.54
+                        -3.88-1.54-.53-1.36-1.28-1.72-1.28-1.72
+                        -1.05-.72.08-.71.08-.71 1.16.08 1.77
+                        1.19 1.77 1.19 1.03 1.77 2.7 1.26
+                        3.36.96.1-.75.4-1.26.73-1.55
+                        -2.55-.29-5.24-1.28-5.24-5.7
+                        0-1.26.45-2.29 1.19-3.1
+                        -.12-.29-.52-1.47.11-3.06
+                        0 0 .97-.31 3.17 1.18
+                        .92-.26 1.91-.39 2.89-.39
+                        .98 0 1.97.13 2.89.39
+                        2.2-1.49 3.17-1.18 3.17-1.18
+                        .63 1.59.23 2.77.11 3.06
+                        .74.81 1.19 1.84 1.19 3.1
+                        0 4.43-2.7 5.4-5.27 5.69
+                        .41.36.77 1.06.77 2.14
+                        0 1.55-.01 2.8-.01 3.18
+                        0 .31.21.68.8.56C20.21 21.39
+                        23.5 17.08 23.5 12
+                        23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                    View Project on GitHub
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECT 3: FLAPPY COSMO -->
+    <section id="cosmo" class="project-section">
+
+        <div class="project-content">
+
+            <div class="project-image">
+                <img
+                    src="/images/projects/flappy-cosmo.png"
+                    alt="Flappy Cosmo game screenshot"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-details">
+
+                <span class="project-category">Programming & Game Development</span>
+
+                <h2>Flappy Cosmo</h2>
+
+                <p>
+                    Created a BYU-themed recreation of the classic Flappy Bird
+                    game using Python and Pygame. Players control Cosmo the
+                    Cougar, navigating through obstacles while avoiding
+                    collisions with the environment.
+                </p>
+
+                <p>
+                    Implemented the core game mechanics, including
+                    gravity-based movement, keyboard input, randomized
+                    obstacle generation, collision detection, and score
+                    tracking. The project applies object-oriented programming
+                    to organize game elements such as the player, obstacles,
+                    and ground into separate components.
+                </p>
+
+                <div class="project-skills">
+                    <h3>Technologies & Skills</h3>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Pygame</span>
+                        <span>Object-Oriented Programming</span>
+                        <span>Game Loops</span>
+                        <span>Collision Detection</span>
+                        <span>Basic Physics</span>
+                        <span>Data Structures</span>
+                        <span>Problem Solving</span>
+                    </div>
+                </div>
+
+                <a
+                    href="https://github.com/DiegoRodc/Flappy-Cosmo-Project"
+                    class="github-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08
+                        3.29 9.39 7.86 10.91.58.11.79-.25.79-.56
+                        0-.27-.01-.99-.02-1.94-3.2.7-3.88-1.54
+                        -3.88-1.54-.53-1.36-1.28-1.72-1.28-1.72
+                        -1.05-.72.08-.71.08-.71 1.16.08 1.77
+                        1.19 1.77 1.19 1.03 1.77 2.7 1.26
+                        3.36.96.1-.75.4-1.26.73-1.55
+                        -2.55-.29-5.24-1.28-5.24-5.7
+                        0-1.26.45-2.29 1.19-3.1
+                        -.12-.29-.52-1.47.11-3.06
+                        0 0 .97-.31 3.17 1.18
+                        .92-.26 1.91-.39 2.89-.39
+                        .98 0 1.97.13 2.89.39
+                        2.2-1.49 3.17-1.18 3.17-1.18
+                        .63 1.59.23 2.77.11 3.06
+                        .74.81 1.19 1.84 1.19 3.1
+                        0 4.43-2.7 5.4-5.27 5.69
+                        .41.36.77 1.06.77 2.14
+                        0 1.55-.01 2.8-.01 3.18
+                        0 .31.21.68.8.56C20.21 21.39
+                        23.5 17.08 23.5 12
+                        23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                    View Full Code on GitHub
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</main>
 
 </body>
 </html>
