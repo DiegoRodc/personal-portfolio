@@ -389,8 +389,8 @@ img {
   width: 250px;           /* Sets a specific width for your image */
   height: auto;         /* Maintains the original image aspect ratio */
   padding: 10px;    
-  background-color: #E5D3AF;
-  border: 4px solid #790D16;  
+  /* background-color: #E5D3AF;
+  border: 4px solid #790D16;  */
 }
 
 /* =========================
