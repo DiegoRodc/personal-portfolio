@@ -1,7 +1,40 @@
 
-/* =========================
-   GENERAL RESET
-========================= */
+/* ==================================================
+   1. WEBSITE CUSTOMIZATION
+   Change these values to customize your website.
+================================================== */
+
+:root {
+
+    /* COLORS */
+    --burgundy: #790D16;
+    --cream: #F5EFE1;
+    --gold: #E5D3AF;
+    --linkedin-blue: #1d85ee;
+
+    /* FONTS */
+    --main-font: Arial, Helvetica, sans-serif;
+
+    /* FONT SIZES */
+    --name-size: 1.5rem;
+    --navigation-size: 0.95rem;
+    --heading-size: 2.8rem;
+    --subheading-size: 1.8rem;
+    --introduction-size: 1.12rem;
+
+    /* LAYOUT */
+    --page-padding: 8%;
+    --content-width: 1100px;
+    --photo-width: 280px;
+
+    /* HEADER */
+    --header-height: 80px;
+}
+
+
+/* ==================================================
+   2. GENERAL RESET
+================================================== */
 
 * {
     margin: 0;
@@ -15,33 +48,34 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5EFE1;
-    color: #790D16;
-    padding-top: 80px;
+    font-family: var(--main-font);
+    background-color: var(--cream);
+    color: var(--burgundy);
+    padding-top: var(--header-height);
 }
 
 
-/* =========================
-   NAVIGATION HEADER
-========================= */
+/* ==================================================
+   3. NAVIGATION HEADER
+================================================== */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: 80px;
+    height: var(--header-height);
     z-index: 1000;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 8%;
+    padding: 0 var(--page-padding);
 
-    /* Normal header appearance */
     background-color: rgba(121, 13, 22, 0.98);
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -54,19 +88,15 @@ body {
 }
 
 
-/* =========================
-   SCROLL EFFECT
-========================= */
-
-/* Header becomes more transparent after scrolling */
+/* ==================================================
+   4. HEADER SCROLL EFFECT
+================================================== */
 
 .navbar.scrolled {
     background-color: rgba(121, 13, 22, 0.72);
     border-bottom-color: rgba(245, 239, 225, 0.12);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-
-/* Restore normal appearance when hovering over header */
 
 .navbar.scrolled:hover,
 .navbar.scrolled:focus-within {
@@ -75,18 +105,19 @@ body {
 }
 
 
-/* =========================
-   BRAND / NAME
-========================= */
+/* ==================================================
+   5. BRAND / NAME
+================================================== */
 
 .logo {
     display: flex;
     align-items: center;
     gap: 11px;
 
-    color: #F5EFE1;
-    font-size: 1.5rem;
+    color: var(--cream);
+    font-size: var(--name-size);
     font-weight: 700;
+
     text-decoration: none;
     letter-spacing: 0.3px;
 
@@ -94,7 +125,7 @@ body {
 }
 
 .logo:hover {
-    color: #E5D3AF;
+    color: var(--gold);
 }
 
 
@@ -103,16 +134,18 @@ body {
 .brand-icon {
     width: 34px;
     height: 34px;
+
     object-fit: contain;
     flex-shrink: 0;
+
     filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
             saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
 }
 
 
-/* =========================
-   NAVIGATION LINKS
-========================= */
+/* ==================================================
+   6. NAVIGATION LINKS
+================================================== */
 
 .nav-links {
     display: flex;
@@ -120,26 +153,23 @@ body {
     gap: 30px;
 }
 
-
-/* Home and other navigation items */
-
 .nav-item {
     display: flex;
     align-items: center;
     gap: 8px;
 
-    color: #F5EFE1;
-    font-size: 0.95rem;
+    color: var(--cream);
+    font-size: var(--navigation-size);
     font-weight: 500;
-    text-decoration: none;
 
+    text-decoration: none;
     padding: 12px 0;
 
     transition: color 0.2s ease;
 }
 
 .nav-item:hover {
-    color: #E5D3AF;
+    color: var(--gold);
 }
 
 
@@ -148,15 +178,17 @@ body {
 .nav-icon {
     width: 22px;
     height: 22px;
+
     object-fit: contain;
+
     filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
             saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
 }
 
 
-/* =========================
-   DROPDOWN NAVIGATION
-========================= */
+/* ==================================================
+   7. DROPDOWN NAVIGATION
+================================================== */
 
 .dropdown {
     position: relative;
@@ -166,9 +198,11 @@ body {
 
 .dropdown::after {
     content: "";
+
     position: absolute;
     top: 100%;
     left: 0;
+
     width: 100%;
     height: 10px;
 }
@@ -184,8 +218,9 @@ body {
     background: none;
     border: none;
 
-    color: #F5EFE1;
-    font-size: 0.95rem;
+    color: var(--cream);
+    font-family: inherit;
+    font-size: var(--navigation-size);
     font-weight: 500;
 
     cursor: pointer;
@@ -196,7 +231,7 @@ body {
 
 .dropdown-toggle:hover,
 .dropdown.open .dropdown-toggle {
-    color: #E5D3AF;
+    color: var(--gold);
 }
 
 
@@ -230,8 +265,8 @@ body {
 
     min-width: 230px;
 
-    background-color: #790D16;
-    border: 1px solid #E5D3AF;
+    background-color: var(--burgundy);
+    border: 1px solid var(--gold);
     border-radius: 10px;
 
     padding: 8px;
@@ -249,7 +284,7 @@ body {
 }
 
 
-/* Show dropdown when JavaScript opens it */
+/* Show Dropdown */
 
 .dropdown.open .dropdown-menu {
     opacity: 1;
@@ -264,7 +299,7 @@ body {
     display: block;
     padding: 11px 12px;
 
-    color: #F5EFE1;
+    color: var(--cream);
     text-decoration: none;
     font-size: 0.9rem;
 
@@ -279,7 +314,7 @@ body {
 .dropdown-menu a:hover,
 .dropdown-menu a:focus-visible {
     background-color: rgba(245, 239, 225, 0.12);
-    color: #E5D3AF;
+    color: var(--gold);
     padding-left: 16px;
 }
 
@@ -293,9 +328,9 @@ body {
 }
 
 
-/* =========================
-   DESKTOP HOVER BEHAVIOR
-========================= */
+/* ==================================================
+   8. DESKTOP HOVER BEHAVIOR
+================================================== */
 
 @media (hover: hover) and (pointer: fine) {
 
@@ -308,7 +343,7 @@ body {
 
     .dropdown:hover .dropdown-toggle,
     .dropdown:focus-within .dropdown-toggle {
-        color: #E5D3AF;
+        color: var(--gold);
     }
 
     .dropdown:hover .arrow,
@@ -319,9 +354,9 @@ body {
 }
 
 
-/* =========================
-   LINKEDIN ICON
-========================= */
+/* ==================================================
+   9. LINKEDIN ICON
+================================================== */
 
 .linkedin-link {
     display: flex;
@@ -333,7 +368,7 @@ body {
     width: 25px;
     height: 25px;
 
-    fill: #1d85ee;
+    fill: var(--linkedin-blue);
 
     transition:
         fill 0.2s ease,
@@ -346,66 +381,102 @@ body {
 }
 
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* ==================================================
+   10. MAIN CONTENT
+================================================== */
 
 main {
-    padding: 40px 8%;
+    padding: 50px var(--page-padding);
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 section {
     min-height: 400px;
-    padding: 60px 0;
-
-    border-bottom: 1px solid #790D16;
+    padding: 30px 0;
 
     scroll-margin-top: 110px;
 }
 
 h1,
 h2 {
-    margin-bottom: 20px;
-    color: #790D16;
+    color: var(--burgundy);
 }
 
-.project-section {
-    min-height: 350px;
+h1 {
+    font-size: var(--heading-size);
+    margin-bottom: 12px;
 }
+
+h2 {
+    font-size: var(--subheading-size);
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   11. HOMEPAGE INTRODUCTION
+================================================== */
 
 .home {
-  display: flex;          /* Aligns paragraph and image side-by-side */
-  align-items: center;    /* Vertically centers the image next to the text */
-  gap: 24px;              /* Creates a clean breathing space between text and image */
-  max-width: 900px;       /* Keeps the entire section from stretching across the whole page */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    max-width: var(--content-width);
+    margin-top: 30px;
 }
+
+
+/* Introduction Text */
 
 .intro {
-    text-align: justify;
-    max-width: 50%;
+    flex: 1;
+    max-width: 700px;
+
+    font-size: var(--introduction-size);
+    line-height: 1.8;
+
+    text-align: left;
 }
 
-img {
-  width: 250px;           /* Sets a specific width for your image */
-  height: auto;         /* Maintains the original image aspect ratio */
-  padding: 10px;    
-  /* background-color: #E5D3AF;
-  border: 4px solid #790D16;  */
+.intro p + p {
+    margin-top: 18px;
 }
 
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
+
+/* Personal Photo */
+
+.photo {
+    width: var(--photo-width);
+    height: auto;
+
+    flex-shrink: 0;
+
+    padding: 8px;
+
+    background-color: var(--cream);
+    border: 4px solid var(--burgundy);
+    border-radius: 12px;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   12. MOBILE RESPONSIVENESS
+================================================== */
 
 @media (max-width: 650px) {
 
-    .navbar {
-        padding: 0 5%;
-        height: 75px;
+    :root {
+        --header-height: 75px;
     }
 
-    body {
-        padding-top: 75px;
+    .navbar {
+        padding: 0 5%;
     }
 
     .logo {
@@ -414,12 +485,9 @@ img {
     }
 
     .brand-icon {
-    width: 34px;
-    height: 34px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
-            saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
-}
+        width: 30px;
+        height: 30px;
+    }
 
     .nav-links {
         gap: 15px;
@@ -450,12 +518,37 @@ img {
     }
 
     main {
-        padding: 30px 5%;
+        padding: 35px 5%;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .intro {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .photo {
+        width: 220px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 }
 
 
-/* Extra Small Screens */
+/* ==================================================
+   13. EXTRA SMALL SCREENS
+================================================== */
 
 @media (max-width: 400px) {
 
@@ -471,8 +564,6 @@ img {
     .brand-icon {
         width: 23px;
         height: 23px;
-        filter: brightness(0) saturate(100%) invert(94%) sepia(10%)
-            saturate(500%) hue-rotate(334deg) brightness(104%) contrast(92%);
     }
 
     .nav-links {
@@ -494,12 +585,16 @@ img {
         width: 19px;
         height: 19px;
     }
+
+    .photo {
+        width: 200px;
+    }
 }
 
 
-/* =========================
-   ACCESSIBILITY
-========================= */
+/* ==================================================
+   14. ACCESSIBILITY
+================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
