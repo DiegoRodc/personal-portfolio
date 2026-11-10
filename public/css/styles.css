@@ -801,7 +801,7 @@ h2 {
 .project-image img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 125%;
     object-fit: cover;
     transition: transform 0.35s ease;
 }
@@ -975,5 +975,467 @@ h2 {
     .github-button {
         width: 100%;
         padding: 12px;
+    }
+}
+
+
+/* =========================================
+   RESEARCH PAGE
+========================================= */
+
+.research-page {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 65px 8% 90px;
+}
+
+
+/* Page introduction */
+
+.research-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.research-intro h1 {
+    color: var(--burgundy);
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+}
+
+.research-intro p {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* Research sections */
+
+.research-section {
+    scroll-margin-top: 110px;
+    padding: 38px;
+    margin-bottom: 55px;
+    background-color: #fffdf8;
+    border: 1px solid rgba(121, 13, 22, 0.15);
+    border-left: 5px solid var(--burgundy);
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Research heading */
+
+.research-category {
+    display: inline-block;
+    color: var(--burgundy);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.research-heading h2,
+.development-heading h2 {
+    color: var(--burgundy);
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+
+/* Conference information */
+
+.research-conference {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 30px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.conference-label {
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: var(--burgundy);
+    color: var(--cream);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* Overview */
+
+.research-overview p,
+.development-overview p {
+    color: #444;
+    font-size: 1.02rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* Research process */
+
+.research-process {
+    margin-top: 40px;
+}
+
+.research-process h3,
+.development-details h3,
+.ongoing-work h3,
+.research-skills h3 {
+    color: var(--burgundy);
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.research-process-intro {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.research-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.research-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(121, 13, 22, 0.12);
+}
+
+.research-step:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.step-number {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--cream);
+    color: var(--burgundy);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.research-step h4 {
+    color: #333;
+    font-size: 1.05rem;
+    margin-bottom: 7px;
+}
+
+.research-step p {
+    color: #555;
+    font-size: 0.96rem;
+    line-height: 1.7;
+}
+
+
+/* Conference highlight */
+
+.conference-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 25px;
+    background-color: var(--cream);
+    border-radius: 9px;
+}
+
+.conference-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    color: var(--burgundy);
+}
+
+.conference-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.conference-highlight h3 {
+    color: var(--burgundy);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.conference-highlight p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.conference-link {
+    display: inline-block;
+    color: var(--burgundy);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.conference-link:hover {
+    color: #a51b26;
+}
+
+
+/* Research buttons */
+
+.research-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.research-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 19px;
+
+    background-color: var(--burgundy);
+    color: var(--cream);
+
+    border: 2px solid var(--burgundy);
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.research-button svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+.research-button:hover {
+    background-color: transparent;
+    color: var(--burgundy);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(121, 13, 22, 0.15);
+}
+
+.research-button.secondary {
+    background-color: transparent;
+    color: var(--burgundy);
+}
+
+.research-button.secondary:hover {
+    background-color: var(--burgundy);
+    color: var(--cream);
+}
+
+
+/* =========================================
+   ONGOING DEVELOPMENT SECTION
+========================================= */
+
+.development-section {
+    border-left-color: #a77d36;
+}
+
+.development-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.development-heading h2 {
+    margin-bottom: 0;
+}
+
+.development-status {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    background-color: var(--cream);
+    color: #74551f;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+/* Development cards */
+
+.development-details {
+    margin-top: 35px;
+}
+
+.development-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.development-card {
+    padding: 22px 18px;
+    background-color: var(--cream);
+    border: 1px solid rgba(121, 13, 22, 0.12);
+    border-radius: 8px;
+}
+
+.development-card-icon {
+    width: 35px;
+    height: 35px;
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.development-card-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.development-card h4 {
+    color: var(--burgundy);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.development-card p {
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+
+/* Ongoing work description */
+
+.ongoing-work {
+    margin-top: 35px;
+    padding: 23px;
+    background-color: #fffaf0;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+}
+
+.ongoing-work p {
+    color: #444;
+    font-size: 0.96rem;
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+.ongoing-work p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Research technologies */
+
+.research-skills {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   RESPONSIVE RESEARCH PAGE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .research-page {
+        padding: 50px 5% 70px;
+    }
+
+    .research-section {
+        padding: 28px;
+    }
+
+    .development-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .research-page {
+        padding: 40px 5% 55px;
+    }
+
+    .research-intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .research-intro p {
+        font-size: 1rem;
+    }
+
+    .research-section {
+        padding: 20px;
+        margin-bottom: 35px;
+    }
+
+    .research-heading h2,
+    .development-heading h2 {
+        font-size: 1.55rem;
+    }
+
+    .research-overview p,
+    .development-overview p {
+        font-size: 0.96rem;
+    }
+
+    .development-heading {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conference-highlight {
+        padding: 18px;
+        gap: 14px;
+    }
+
+    .research-actions {
+        flex-direction: column;
+    }
+
+    .research-button {
+        width: 100%;
+    }
+
+    .research-step {
+        gap: 12px;
+    }
+
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
     }
 }
